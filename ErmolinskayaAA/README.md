@@ -63,3 +63,46 @@ Worker получает задачу из Redis, выполняет длител
 
 Пользователь → Nginx → Frontend  
 Пользователь → Nginx → Backend API → Redis → Worker
+
+## Возможности приложения
+
+Приложение поддерживает несколько режимов обработки текста:
+
+- улучшение текста;
+- исправление ошибок;
+- перевод текста в официальный стиль;
+- перевод текста в дружелюбный стиль;
+- сокращение текста.
+
+Обработка выполняется отдельным worker-сервисом с использованием NLP-модели `cointegrated/rut5-small`.
+
+## Используемые технологии
+HTML
+CSS
+JavaScript
+Python
+Flask
+Gunicorn
+Redis
+RQ
+Nginx
+Docker
+Docker Compose
+Transformers
+PyTorch
+ruT5
+
+## Инструкция по запуску
+
+1. Установить Docker и Docker Compose.
+
+2. Перейти в корень проекта, где находится файл `docker-compose.yml`:
+
+```bash
+cd ErmolinskayaAA
+```
+3. Запустить проект командой:
+docker compose up --build
+
+4. После запуска открыть приложение в браузере:
+  http://localhost
